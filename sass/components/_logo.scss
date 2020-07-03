@@ -1,0 +1,25 @@
+.logo {
+  font-weight: 700;
+  font-size: 24px;
+  font-family: $logoFontFamily, sans-serif;
+  line-height: 1.17;
+  color: $accentColor;
+  text-decoration: none;
+
+  @media screen and (min-width: 1200px) {
+    @include flexible();
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.19;
+  }
+
+  .part-of-logo {
+    color: $complementaryLogoColor;
+  }
+}
+
+.footer-logo .part-of-logo {
+  color: $primaryWhiteColor;
+}

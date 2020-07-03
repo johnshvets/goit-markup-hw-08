@@ -1,0 +1,51 @@
+.team {
+  padding: 94px 0px;
+  background-color: $complementaryBgColor;
+}
+
+.team-list {
+  @extend %list;
+
+  @media screen and (min-width: 768px) {
+    @include flexible($wrap: wrap);
+  }
+}
+
+.team-list > .item {
+  @extend .advantages-list-item;
+
+  padding-bottom: 24px;
+
+  text-align: center;
+  background-color: $primaryWhiteColor;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.thumb {
+  height: 320px;
+
+  @media screen and (min-width: 768px) {
+    height: 260px;
+  }
+}
+
+.profession {
+  margin-top: 0;
+  margin-bottom: 16px;
+
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+
+.team-list .title {
+  @extend .profession;
+
+  margin-top: 30px;
+  margin-bottom: 10px;
+
+  color: $titleTextColor;
+  font-weight: 500;
+}

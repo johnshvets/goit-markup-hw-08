@@ -1,0 +1,32 @@
+.social-links-list {
+  @extend %list;
+  @include flexible(inline-flex);
+}
+
+.social-links-list .item {
+  width: calc((100% - 30px) / 4);
+  margin-right: 10px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social-links-list .link {
+  @include flexible();
+  @include transition(background-color);
+  padding: 12px;
+  border-radius: 50%;
+  color: $clientBorderColor;
+
+  &:hover,
+  &:focus {
+    color: $primaryWhiteColor;
+    background-color: $accentColor;
+  }
+}
+
+.social-icon {
+  @include transition();
+  fill: currentColor;
+}

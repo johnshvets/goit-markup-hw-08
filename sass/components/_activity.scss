@@ -1,0 +1,42 @@
+.activity-section {
+  padding-top: 0;
+
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}
+
+.activity-list {
+  @extend %list;
+  @include flexible();
+}
+
+.activity-list .item {
+  position: relative;
+  width: calc((100% - 60px) / 3);
+  margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.subtitle {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 27px;
+  padding-bottom: 27px;
+
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: $primaryWhiteColor;
+  text-align: center;
+
+  background: rgba(47, 48, 58, 0.8);
+}

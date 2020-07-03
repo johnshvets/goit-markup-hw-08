@@ -1,0 +1,68 @@
+.hero-section {
+  @include flexible($align: center, $justify: center, $direction: column);
+  @include hero(url(../images/hero-mobile.jpg));
+  max-width: 480px;
+  height: 400px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: $titleTextColor;
+  background-size: contain;
+
+  text-align: center;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    @include hero(url(../images/hero-mobile-2x.jpg));
+  }
+
+  @media screen and (min-width: 768px) {
+    @include hero(url(../images/hero-tablet.jpg));
+    max-width: 768px;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      @include hero(url(../images/hero-tablet-2x.jpg));
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include hero(url(../images/hero.jpg));
+    max-width: 1600px;
+    height: 600px;
+
+    background-size: cover;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      @include hero(url(../images/hero-2x.jpg));
+    }
+  }
+}
+
+.hero {
+  max-width: 360px;
+
+  @media screen and (min-width: 1200px) {
+    max-width: 696px;
+  }
+}
+
+.hero-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.61;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $primaryWhiteColor;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 44px;
+    line-height: 1.36;
+  }
+}

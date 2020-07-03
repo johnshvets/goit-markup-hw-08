@@ -1,0 +1,48 @@
+.portfolio {
+  border-bottom: 1px solid $borderColorHeaderPortfolio;
+}
+
+.filter {
+  @extend %list;
+  @include flexible($wrap: wrap);
+
+  margin-bottom: 50px;
+
+  @media screen and (min-width: 768px) {
+    @include flexible($justify: center);
+  }
+}
+
+.filter .item {
+  margin-right: 8px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media screen and (max-width: 767px) {
+    &:not(:nth-last-child(-n + 2)) {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.btn {
+  @extend %button;
+  @include transition();
+  @include transition(background-color);
+
+  padding: 6px 22px;
+  color: $titleTextColor;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+
+  background-color: $complementaryBgColor;
+
+  &:hover,
+  &:focus {
+    color: $primaryWhiteColor;
+    background-color: $accentColor;
+  }
+}
